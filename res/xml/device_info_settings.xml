@@ -19,6 +19,11 @@
         xmlns:settings="http://schemas.android.com/apk/res-auto"
         android:title="@string/about_settings">
 
+		<!-- Mithra Logo -->
+        <PreferenceScreen 
+                android:layout="@layout/logo" 
+				android:key="od_logo" />
+
         <!-- System update settings - launches activity -->
         <PreferenceScreen android:key="system_update_settings"
                 android:title="@string/system_update_settings_list_item_title"
@@ -93,6 +98,27 @@
                 android:title="@string/device_name"
                 android:summary="@string/device_info_default"/>
 
+		<!-- Mithra version -->
+        <Preference android:key="mod_version"
+                android:enabled="false"
+                android:shouldDisableView="false"
+                android:title="@string/mithra_mod_version"
+                android:summary="@string/mod_version_default" />
+
+        <!-- Android API Version -->
+        <Preference android:key="mod_api_level"
+                android:enabled="false"
+                android:shouldDisableView="false"
+                android:title="@string/mod_api_level"
+                android:summary="@string/mod_api_level_default" />
+
+        <!-- Build date -->
+        <Preference android:key="build_date"
+                android:enabled="false"
+                android:shouldDisableView="false"
+                android:title="@string/build_date"
+				android:summary="@string/build_date_default" />
+
         <!-- Device hardware model -->
         <com.android.settings.DividerPreference
                 android:key="device_model"
@@ -110,20 +136,6 @@
                 android:shouldDisableView="false"
                 android:title="@string/firmware_version"
                 android:summary="@string/device_info_default"/>
-
-        <!-- Mod version -->
-        <Preference android:key="mod_version"
-                android:enabled="false"
-                android:shouldDisableView="false"
-                android:title="@string/mod_version"
-                android:summary="@string/mod_version_default" />
-
-        <!-- CyanogenMod API Version -->
-        <Preference android:key="mod_api_level"
-                android:enabled="false"
-                android:shouldDisableView="false"
-                android:title="@string/mod_api_level"
-                android:summary="@string/mod_api_level_default" />
 
         <!-- Security patch level -->
         <PreferenceScreen android:key="security_patch"
@@ -172,13 +184,6 @@
                 android:summary="@string/device_info_default"
                 settings:allowDividerAbove="true"
                 settings:allowDividerBelow="true"/>
-
-        <!-- Build date -->
-        <Preference android:key="build_date"
-                android:enabled="false"
-                android:shouldDisableView="false"
-                android:title="@string/build_date"
-                android:summary="@string/build_date_default" />
 
         <!-- Detailed build version -->
         <Preference android:key="build_number"
